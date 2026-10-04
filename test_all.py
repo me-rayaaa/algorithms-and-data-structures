@@ -27,7 +27,9 @@ def test_avl():
     root = None
     for i in [10, 20, 30, 40, 50]:
         root = tree.insert(root, i)
-    assert root.key == 30
+    assert root.key == 20
+    assert root.left.key == 10
+    assert root.right.key == 40
 
 def test_bubble_sort():
     assert bubble_sort([3, 1, 2]) == [1, 2, 3]
